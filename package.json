@@ -1,0 +1,23 @@
+{
+  "name": "moner-managey",
+  "version": "1.0.0",
+  "description": "Money management for dum-, I mean, me.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OverbeckSilvaLeonardo/moner-managey.git"
+  },
+  "keywords": [
+    "node-js",
+    "mongo-db"
+  ],
+  "author": "Leonardo Overbeck da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OverbeckSilvaLeonardo/moner-managey/issues"
+  },
+  "homepage": "https://github.com/OverbeckSilvaLeonardo/moner-managey#readme"
+}
