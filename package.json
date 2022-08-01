@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/OverbeckSilvaLeonardo/moner-managey/issues"
   },
-  "homepage": "https://github.com/OverbeckSilvaLeonardo/moner-managey#readme"
+  "homepage": "https://github.com/OverbeckSilvaLeonardo/moner-managey#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
