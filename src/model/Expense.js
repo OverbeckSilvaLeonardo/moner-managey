@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
-const expenseSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
   id: { type: String },
   description: { type: String, required: true },
   amount: { type: mongoose.Types.Decimal128, required: true },
   date: { type: Date, required: true },
 });
 
-const expense = mongoose.model('expenses', expenseSchema);
+const Expense = mongoose.model('expenses', schema);
 
-export default expense;
+export default Expense;
