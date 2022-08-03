@@ -1,5 +1,8 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import { dbPassword } from './dbConfig.js';
 
-mongoose.connect('<fill-uri-here>');
+
+// DO NOT COMMIT
+mongoose.connect(`mongodb+srv://unleaked-moner-managey:${ dbPassword }@moner-managey.zw8enwn.mongodb.net/moner-managey);
 
 export default mongoose.connection;
