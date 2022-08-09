@@ -97,4 +97,17 @@ export default class IncomeController {
       return res.status(200).json({ message: `query successful`, income: { id, description, amount: amount.toString(), date } });
     });
   }
+
+  static remove(req, res) {
+    const id = req.params.id;
+
+    Income.findByIdAndDelete(id, err => {
+      if (err) {
+        return res.status(500).json({ message: `${ err.message } - unable to delete income` });
+      }
+
+      return res.status(204).send();
+    })
+
+  }
 }
