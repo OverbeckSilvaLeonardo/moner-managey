@@ -85,12 +85,10 @@ Expenses are required to have unique descriptions within any given month.
 ```
   DELETE /income/${id}
 ```
-<br>
-<br>
 Deletes the desired income.
-
+<br>
+<br>
 ```
   DELETE /expense/${id}
 ```
-
 Deletes the desired expense.
