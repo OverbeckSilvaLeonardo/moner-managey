@@ -7,12 +7,20 @@ export default class IncomeController {
         return res.status(500).json({ message: `${ err.message } - unable to fetch income data` });
       }
 
-      return res.status(200).json({ message: `query successful`, incomes });
+      let data = incomes.map(({id, description, amount, date}) => {
+        return {id, description, amount: amount.toString(), date}
+      })
+
+      return res.status(200).json({ message: `query successful`, data });
     });
   }
 
   static add(req, res) {
     let toBeAdded = new Income(req.body);
+
+    if(!/\d+\.\d{2}/i.test(toBeAdded.amount.toString())) {
+      return res.status(400).json({ message: 'Invalid amount format' });
+    }
 
     Income.find({
       description: toBeAdded.description,
@@ -33,8 +41,23 @@ export default class IncomeController {
         if (err) {
           return res.status(500).json({ message: `${ err.message } - unable to add income` });
         }
-        return res.status(201).json({ message: 'Income registered successfully', income: toBeAdded });
+
+        const {id, description, amount, date} = toBeAdded
+
+        return res.status(201).json({ message: 'Income registered successfully', income: {id, description, amount: amount.toString(), date} });
       });
     });
+  }
+
+  static get(req, res) {
+    const id = req.params.id;
+
+    Income.findById(id, (err, {id, description, amount, date}) => {
+      if (err) {
+        return res.status(500).json({ message: `${ err.message } - unable to fetch income` });
+      }
+
+      return res.status(200).json({message: `query successful`, income: {id, description, amount: amount.toString(), date}})
+    })
   }
 }
