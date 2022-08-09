@@ -7,13 +7,13 @@ Single user income and expense tracker, created as a part of Alura's Backend Cha
 
 #### Get all resource data
 
-```http
+```
   GET /income
 ```
 Returns all income registries.
 <br><br>
 
-```http
+```
   GET /expense
 ```
 Returns all expense registries.
@@ -22,7 +22,7 @@ Returns all expense registries.
 
 #### Add new entry to a resource
 
-```http
+```
   POST /income
 ```
 
@@ -35,7 +35,7 @@ Returns all expense registries.
 Incomes are required to have unique descriptions within any given month.
 <br>
 <br>
-```http
+```
   POST /expense
 ```
 
@@ -51,7 +51,7 @@ Expenses are required to have unique descriptions within any given month.
 
 #### Update resource
 
-```http
+```
   PUT /income/${id}
 ```
 
@@ -65,7 +65,7 @@ Expenses are required to have unique descriptions within any given month.
 Incomes are required to have unique descriptions within any given month.
 <br>
 <br>
-```http
+```
   PUT /expense/${id}
 ```
 
@@ -82,14 +82,14 @@ Expenses are required to have unique descriptions within any given month.
 
 #### Delete resource
 
-```http
+```
   DELETE /income/${id}
 ```
 <br>
 <br>
 Deletes the desired income.
 
-```http
+```
   DELETE /expense/${id}
 ```
 
