@@ -20,7 +20,7 @@ Returns all income registries.
 ```
 Returns all expense registries.
 
-<br><br>
+<br>
 
 #### Add new entry to a resource
 
@@ -49,7 +49,7 @@ Incomes are required to have unique descriptions within any given month.
 
 Expenses are required to have unique descriptions within any given month.
 
-<br><br>
+<br>
 
 #### Update resource
 
@@ -80,7 +80,7 @@ Incomes are required to have unique descriptions within any given month.
 
 Expenses are required to have unique descriptions within any given month.
 
-<br><br>
+<br>
 
 #### Delete resource
 
